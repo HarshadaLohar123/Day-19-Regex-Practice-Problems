@@ -7,22 +7,22 @@ namespace Regex_Problems
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Please Enter your Last Name");
+            Console.WriteLine("Please Enter your Email ID : ");
 
             while (true)
             {
                 string input = Console.ReadLine();
-                Regex r = new Regex("^[A-Z][a-z]{2}$");
+                Regex r = new Regex(@"^[a-z]{3}(\.[a-z]{3})[@]bl.(|co|in)$");
                 if (r.IsMatch(input))
                 {
-                    Console.WriteLine("your Last Name Is " + true);
+                    Console.WriteLine("Your Email ID is " + true);
                 }
                 else
                 {
-                    Console.WriteLine("Your Last Name Is " + false);
-                    Console.WriteLine("Last Name Should Contain Only Four Character");
+                    Console.WriteLine("Your Email Id is " + false);
                 }
             }
+
         }
     }
 }
