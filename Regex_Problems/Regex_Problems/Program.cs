@@ -7,23 +7,23 @@ namespace Regex_Problems
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Please Enter your Mobile No:");
+            Console.WriteLine("Please Enter your Password : ");
+
             while (true)
             {
                 string input = Console.ReadLine();
-                Regex r = new Regex("^91 [1-9][0-9]{9}$");
-
+                Regex r = new Regex("^[A-Za-z0-9]{8}$");
                 if (r.IsMatch(input))
                 {
-                    Console.WriteLine(true);
+                    Console.WriteLine("Your Password Is :" + true);
                 }
                 else
                 {
-                    Console.WriteLine(false);
+                    Console.WriteLine("Your Password is " + false);
                 }
-
             }
-
         }
+
     }
 }
+
