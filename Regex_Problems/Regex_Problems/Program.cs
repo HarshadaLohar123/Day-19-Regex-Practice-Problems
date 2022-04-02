@@ -7,20 +7,21 @@ namespace Regex_Problems
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Please Enter your Email ID : ");
-
+            Console.WriteLine("Please Enter your Mobile No:");
             while (true)
             {
                 string input = Console.ReadLine();
-                Regex r = new Regex(@"^[a-z]{3}(\.[a-z]{3})[@]bl.(|co|in)$");
+                Regex r = new Regex("^91 [1-9][0-9]{9}$");
+
                 if (r.IsMatch(input))
                 {
-                    Console.WriteLine("Your Email ID is " + true);
+                    Console.WriteLine(true);
                 }
                 else
                 {
-                    Console.WriteLine("Your Email Id is " + false);
+                    Console.WriteLine(false);
                 }
+
             }
 
         }
