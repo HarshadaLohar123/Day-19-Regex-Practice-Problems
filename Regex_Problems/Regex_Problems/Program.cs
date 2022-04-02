@@ -7,19 +7,20 @@ namespace Regex_Problems
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Please Enter your Password : ");
-
+            Console.WriteLine("Enter your passward ");
             while (true)
             {
                 string input = Console.ReadLine();
-                Regex r = new Regex("^[A-Za-z0-9]{8}$");
+                Regex r = new Regex("^[A-Z][a-z]{7}$");
+
                 if (r.IsMatch(input))
                 {
-                    Console.WriteLine("Your Password Is :" + true);
+                    Console.WriteLine("Your Password is " + true);
                 }
                 else
                 {
-                    Console.WriteLine("Your Password is " + false);
+                    Console.WriteLine("Your Passward is " + false);
+                    Console.WriteLine("Please Take 1 Upper Case: ");
                 }
             }
         }
